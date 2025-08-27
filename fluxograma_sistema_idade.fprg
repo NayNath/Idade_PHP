@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxograma_sistema_idade"/>
+        <attribute name="authors" value="nathaly.llcunha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-27 04:38:54 "/>
+        <attribute name="created" value="bmF0aGFseS5sbGN1bmhhO1NBTjA2NzQzOTFXMTEtMTsyMDI1LTA4LTI3OyIwNDoyNTowMiAiOzM2MDc="/>
+        <attribute name="edited" value="bmF0aGFseS5sbGN1bmhhO1NBTjA2NzQzOTFXMTEtMTsyMDI1LTA4LTI3OyIwNDozODo1NCAiOzE7MzcyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digoite seu nome: &quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Digite sua idade: &quot;" newline="True"/>
+            <input variable="idade"/>
+            <if expression="idade &lt; 12">
+                <then>
+                    <output expression="&quot;Nome: &quot; &amp; nome &amp; &quot;Idade: &quot; &amp; idade &amp; &quot; Voc&#234; &#233; um Crian&#231;a&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="idade &gt;=12 &amp;&amp; idade&lt;=17">
+                        <then>
+                            <output expression="&quot;Nome: &quot; &amp; nome &amp; &quot;Idade: &quot; &amp; idade &amp; &quot; Voc&#234; &#233; um Adolecente&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="idade&gt;=18 &amp;&amp; idade&lt;25">
+                                <then>
+                                    <output expression="&quot;Nome: &quot; &amp; nome &amp; &quot;Idade: &quot; &amp; idade &amp; &quot; Voc&#234; &#233; um Jovem&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="idade&gt;=26 &amp;&amp; idade&lt;60">
+                                        <then>
+                                            <output expression="&quot;Nome: &quot; &amp; nome &amp; &quot;Idade: &quot; &amp; idade &amp; &quot; Voc&#234; &#233; um Adulto&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Nome: &quot; &amp; nome &amp; &quot;Idade: &quot; &amp; idade &amp; &quot; Voc&#234; &#233; um Melhor idade&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="idade &gt;= 18">
+                <then>
+                    <output expression="&quot;Bem Vindo &quot; &amp; nome &amp; &quot; voc&#234; pode etrar no sistema!!!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Negado! Apenas maior de 18 pode ingressar!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
