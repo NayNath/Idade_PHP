@@ -1,6 +1,6 @@
 <?php
 
-$idade = $_GET["idade"];
+$idade = filter_input(INPUT_GET,"idade", FILTER_SANITIZE_NUMBER_INT);
 $nome = $_GET["nome"];
 
 $mensagemPrincipal = "<p> Nome: " . $nome . " Idade: " . $idade . "</p> ";
